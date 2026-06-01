@@ -1,35 +1,37 @@
 [gd_scene format=3 uid="uid://bjivnesu7qes0"]
 
-[ext_resource type="Texture2D" uid="uid://c2foakeun88j4" path="res://UI Deliverables/Loading Bar Overlay/LoadingBarUnder.png" id="1_1l04a"]
-[ext_resource type="Texture2D" uid="uid://dhsg5dqyaotm2" path="res://UI Deliverables/Loading Bar Overlay/LoadingBar2.png" id="1_gov4d"]
+[ext_resource type="Script" uid="uid://c12vgutmkptir" path="res://scripts/loading.gd" id="0_loadgd"]
+[ext_resource type="Texture2D" uid="uid://de4iyks3m6ey" path="res://UI Deliverables/HP Bar Overlay/HPBarUnderlay.png" id="1_dhqfv"]
+[ext_resource type="Texture2D" uid="uid://bgeg8xgisidmh" path="res://UI Deliverables/Loading Bar Overlay/LoadingOverlay.png" id="2_101rs"]
 [ext_resource type="FontFile" uid="uid://b2pkbqm63xs17" path="res://UI Deliverables/Fonts/ThertoleRegular.ttf" id="3_ecfth"]
 
-[node name="MainMenu" type="Node2D" unique_id=2112529872]
+[node name="MainMenu" type="Node2D" unique_id=644226881]
+script = ExtResource("0_loadgd")
 metadata/_edit_group_ = true
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=1527670351]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1022578295]
 
-[node name="ColorRect" type="ColorRect" parent="HUD" unique_id=2144402769]
+[node name="ColorRect" type="ColorRect" parent="HUD" unique_id=1811467504]
 offset_right = 1080.0
 offset_bottom = 1920.0
 color = Color(0, 0, 0, 0.6666667)
 
-[node name="LoadingBar" type="TextureProgressBar" parent="HUD" unique_id=574792170]
+[node name="LoadingBar" type="TextureProgressBar" parent="HUD" unique_id=188483927]
 texture_filter = 1
-offset_left = 367.0
-offset_top = 885.0001
-offset_right = 400.0
-offset_bottom = 901.0001
-scale = Vector2(10, 10)
-texture_under = ExtResource("1_1l04a")
-texture_over = ExtResource("1_gov4d")
+offset_left = 109.99999
+offset_top = 912.0
+offset_right = 430.0
+offset_bottom = 944.0
+scale = Vector2(2.7, 2.7)
+texture_under = ExtResource("1_dhqfv")
+texture_over = ExtResource("2_101rs")
 
-[node name="LoadingText" type="Label" parent="HUD" unique_id=1818100837]
+[node name="LoadingText" type="Label" parent="HUD" unique_id=12925257]
 texture_filter = 1
-offset_left = 379.0
-offset_top = 823.0
-offset_right = 689.0
-offset_bottom = 895.0
+offset_left = 393.0
+offset_top = 841.0
+offset_right = 703.0
+offset_bottom = 913.0
 theme_override_colors/font_color = Color(0.9552637, 0.47050232, 0.055536367, 1)
 theme_override_fonts/font = ExtResource("3_ecfth")
 theme_override_font_sizes/font_size = 75

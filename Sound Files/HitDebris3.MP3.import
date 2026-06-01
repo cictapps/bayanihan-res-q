@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://botvvftqtui16"
+path="res://.godot/imported/HitDebris3.MP3-1a155425dfbee33687d36b6ef115c49e.mp3str"
+
+[deps]
+
+source_file="res://Sound Files/HitDebris3.MP3"
+dest_files=["res://.godot/imported/HitDebris3.MP3-1a155425dfbee33687d36b6ef115c49e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

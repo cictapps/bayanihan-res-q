@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://c4dj4uamatm8i" path="res://scenes/pause_menu.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cgdcplpup7os2" path="res://scenes/background.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://btvrrbkl82bqr" path="res://scenes/dialogue.tscn" id="9_85g3d"]
+[ext_resource type="Script" uid="uid://b8ah3g8rb5ok7" path="res://scripts/main.gd" id="13_maingd"]
 
 [node name="Main" type="Node2D" unique_id=1819170390]
+script = ExtResource("13_maingd")
 
 [node name="Background" parent="." unique_id=1238761047 instance=ExtResource("8_5vw27")]
 z_index = -5
@@ -48,4 +50,5 @@ position = Vector2(540, 960)
 [node name="Dialogue" parent="." unique_id=179663980 instance=ExtResource("9_85g3d")]
 process_mode = 3
 process_priority = 3
+layer = 10
 visible = false

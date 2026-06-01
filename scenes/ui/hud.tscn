@@ -12,14 +12,18 @@
 [ext_resource type="Texture2D" uid="uid://daec1dyte81mu" path="res://UI Deliverables/Fuel Bar Overlay/FuelBarOverlay.png" id="11_gmc6u"]
 [ext_resource type="Texture2D" uid="uid://qodqqqhxxpdc" path="res://UI Deliverables/Fuel Bar Overlay/FuelSymbol.png" id="12_1e6lo"]
 [ext_resource type="Texture2D" uid="uid://d1dev2tjkou33" path="res://UI Deliverables/Inventory/inventory-1x3.png" id="13_4mi7y"]
-[ext_resource type="Texture2D" uid="uid://ddafnbc3jbesy" path="res://UI Deliverables/Resources (icons)/Rice Icon (Detailed) .png" id="13_gonto"]
-[ext_resource type="Texture2D" uid="uid://q14u8tkjunsd" path="res://UI Deliverables/Resources (icons)/water bottle icon.png" id="14_cwdlq"]
-[ext_resource type="Texture2D" uid="uid://txrt4oai4h36" path="res://UI Deliverables/Resources (icons)/Medicine Icon (Detailed) .png" id="15_o6xly"]
+[ext_resource type="Texture2D" uid="uid://chyquolpvdguc" path="res://assets/Item Assets/Rice Icon w logo 1 (Detailed) .png" id="15_d5po8"]
+[ext_resource type="Texture2D" uid="uid://drant8vq35syk" path="res://assets/Item Assets/water bottle icon.png" id="16_7yoph"]
 [ext_resource type="Texture2D" uid="uid://c4ewnyrc6mn3h" path="res://UI Deliverables/Inventory/inventory-highlight.png" id="16_cwdlq"]
+[ext_resource type="Texture2D" uid="uid://cj0ekdl274tsl" path="res://assets/Item Assets/Medicine Icon (Detailed) .png" id="17_qmm8d"]
 [ext_resource type="Texture2D" uid="uid://bpymdq12l8loj" path="res://UI Deliverables/Buttons/Window2.png" id="17_window"]
+[ext_resource type="Texture2D" uid="uid://cxlplk66avw0p" path="res://assets/Item Assets/shield-icon.png" id="18_t0png"]
 [ext_resource type="FontFile" uid="uid://b2pkbqm63xs17" path="res://UI Deliverables/Fonts/ThertoleRegular.ttf" id="18_thertole"]
+[ext_resource type="Texture2D" uid="uid://x2ggaw880crd" path="res://assets/Item Assets/speedboost-icon.png" id="19_b6swc"]
 [ext_resource type="Texture2D" uid="uid://crw4hwjpr4olc" path="res://UI Deliverables/Buttons/MenuButton.png" id="19_menu"]
+[ext_resource type="Texture2D" uid="uid://br1mkhqtcnq3b" path="res://assets/Item Assets/Repair Icon.png" id="20_27rlx"]
 [ext_resource type="Texture2D" uid="uid://ddjd0t488eiwh" path="res://UI Deliverables/Buttons/ReplayButton.png" id="20_replay"]
+[ext_resource type="Texture2D" uid="uid://du82jyyx05vss" path="res://Obstacle Assets/Debris #1 (1-lane).png" id="21_vuvg6"]
 [ext_resource type="Texture2D" uid="uid://siq20iegkalo" path="res://UI Deliverables/Buttons/Xbutton2.png" id="21_x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cwdlq"]
@@ -63,6 +67,7 @@ layer = 10
 script = ExtResource("1_hud")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1515791839]
+z_index = -1
 offset_right = 1080.0
 offset_bottom = 165.0
 color = Color(0.12941177, 0.5137255, 0.89411765, 0.60784316)
@@ -91,6 +96,7 @@ offset_left = 200.0
 offset_top = 980.0
 offset_right = 880.0
 offset_bottom = 1070.0
+theme_override_fonts/font = ExtResource("8_we3sy")
 theme_override_font_sizes/font_size = 46
 text = "🛡  SHIELD ACTIVE"
 horizontal_alignment = 1
@@ -119,11 +125,11 @@ mouse_filter = 2
 color = Color(1, 0, 0, 0)
 
 [node name="BannerLabel" type="Label" parent="." unique_id=2044901183]
-visible = false
 offset_left = 80.0
 offset_top = 800.0
 offset_right = 1000.0
 offset_bottom = 960.0
+theme_override_fonts/font = ExtResource("8_we3sy")
 theme_override_font_sizes/font_size = 72
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -255,7 +261,8 @@ layout_mode = 2
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("8_we3sy")
 theme_override_font_sizes/font_size = 24
-text = "RICE"
+text = "
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -286,7 +293,6 @@ layout_mode = 2
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("8_we3sy")
 theme_override_font_sizes/font_size = 24
-text = "WATER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -317,7 +323,6 @@ layout_mode = 2
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("8_we3sy")
 theme_override_font_sizes/font_size = 24
-text = "MEDS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -363,7 +368,6 @@ frame_progress = 0.59662104
 texture_filter = 1
 custom_minimum_size = Vector2(212, 150)
 layout_mode = 0
-texture = ExtResource("13_gonto")
 expand_mode = 2
 stretch_mode = 5
 
@@ -385,7 +389,6 @@ frame_progress = 0.82321686
 texture_filter = 1
 custom_minimum_size = Vector2(212, 150)
 layout_mode = 0
-texture = ExtResource("14_cwdlq")
 expand_mode = 2
 stretch_mode = 5
 
@@ -407,11 +410,11 @@ frame_progress = 0.3858232
 texture_filter = 1
 custom_minimum_size = Vector2(212, 150)
 layout_mode = 0
-texture = ExtResource("15_o6xly")
 expand_mode = 2
 stretch_mode = 5
 
 [node name="DumpButton" type="Button" parent="." unique_id=893339923]
+visible = false
 offset_left = 256.0
 offset_top = 1605.0
 offset_right = 856.0
@@ -425,69 +428,194 @@ offset_right = 1080.0
 offset_bottom = 1920.0
 color = Color(0.06, 0.06, 0.22, 0.9)
 
-[node name="GameTitle" type="Label" parent="StartPanel" unique_id=276239547]
+[node name="ColorRect" type="ColorRect" parent="StartPanel" unique_id=368747192]
+visible = false
 layout_mode = 0
-offset_left = 40.0
-offset_top = 320.0
-offset_right = 1040.0
-offset_bottom = 500.0
-theme_override_colors/font_color = Color(1, 0.85, 0.1, 1)
-theme_override_font_sizes/font_size = 82
-text = "BAYANIHAN RES-Q"
-horizontal_alignment = 1
-
-[node name="SubTitle" type="Label" parent="StartPanel" unique_id=1756416848]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 510.0
-offset_right = 1000.0
-offset_bottom = 630.0
-theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
-theme_override_font_sizes/font_size = 54
-text = "Scavenge & Dash"
-horizontal_alignment = 1
+offset_right = 1080.0
+offset_bottom = 1920.0
+color = Color(0, 0, 0, 0.6666667)
+metadata/_edit_lock_ = true
 
 [node name="StartButton" type="Button" parent="StartPanel" unique_id=1448591368]
+texture_filter = 1
 layout_mode = 0
 offset_left = 240.0
 offset_top = 700.0
 offset_right = 840.0
 offset_bottom = 820.0
-theme_override_font_sizes/font_size = 56
-text = "START MISSION"
+theme_override_fonts/font = ExtResource("18_thertole")
+theme_override_font_sizes/font_size = 70
+text = "Start Mission"
 
-[node name="ControlsLabel" type="Label" parent="StartPanel" unique_id=1254060226]
+[node name="HowToPlayText" type="Label" parent="StartPanel" unique_id=421203508]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 860.0
-offset_right = 1020.0
-offset_bottom = 1160.0
-theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
-theme_override_font_sizes/font_size = 38
-text = "← / A   Move Left
-→ / D   Move Right
-SPACE   Dump Cargo
+offset_left = 122.0
+offset_top = 154.0
+offset_right = 955.0
+offset_bottom = 322.0
+theme_override_colors/font_color = Color(0.95686275, 0.47058824, 0.05490196, 1)
+theme_override_fonts/font = ExtResource("18_thertole")
+theme_override_font_sizes/font_size = 175
+text = "how to play"
 
-On Mobile: Tap Left / Right to steer"
+[node name="Insructions" type="Label" parent="StartPanel" unique_id=13475538]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 353.0
+offset_right = 912.0
+offset_bottom = 651.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "<-- or A Move Left
+--> or D Move Right
+
+Press  SPACE to dump cargo
+Click on cargo to drop item
+
+On mobile: Swipe Left/ Right to steer "
 horizontal_alignment = 1
 
-[node name="LegendLabel" type="Label" parent="StartPanel" unique_id=1902841643]
+[node name="CollectText" type="Label" parent="StartPanel" unique_id=213361029]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 1200.0
-offset_right = 1020.0
-offset_bottom = 1560.0
-theme_override_font_sizes/font_size = 36
-text = "🟡 RICE   🔵 WATER   🔴 MEDS
-🌊 FLOOD = slow
-🟫 DEBRIS = damage
-🟢 SHIELD = block next hit
-🟠 BOOST = speed up
-🟣 FUEL = refill tank
-🩵 REPAIR = restore 1 HP"
+offset_left = 351.0
+offset_top = 856.0
+offset_right = 744.0
+offset_bottom = 896.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "Collect the following:"
 horizontal_alignment = 1
+
+[node name="Rice" type="Label" parent="StartPanel" unique_id=225918646]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 1065.0
+offset_right = 335.0
+offset_bottom = 1105.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "Rice"
+horizontal_alignment = 1
+
+[node name="RiceIcon" type="Sprite2D" parent="StartPanel/Rice" unique_id=686876649]
+position = Vector2(50, -91.99994)
+scale = Vector2(3.5, 3.4531262)
+texture = ExtResource("15_d5po8")
+
+[node name="Water" type="Label" parent="StartPanel" unique_id=1579901188]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 1068.0
+offset_right = 583.0
+offset_bottom = 1108.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "Water"
+horizontal_alignment = 1
+
+[node name="WaterBottleIcon" type="Sprite2D" parent="StartPanel/Water" unique_id=674970319]
+position = Vector2(53, -83.5)
+scale = Vector2(4.031251, 3.4140642)
+texture = ExtResource("16_7yoph")
+
+[node name="Meds" type="Label" parent="StartPanel" unique_id=2042993098]
+layout_mode = 0
+offset_left = 718.0
+offset_top = 1065.0
+offset_right = 811.0
+offset_bottom = 1105.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "Meds"
+horizontal_alignment = 1
+
+[node name="MedicineIcon" type="Sprite2D" parent="StartPanel/Meds" unique_id=7599237]
+position = Vector2(36, -81.75)
+scale = Vector2(3.9374998, 4.265624)
+texture = ExtResource("17_qmm8d")
+
+[node name="Shield" type="Label" parent="StartPanel" unique_id=1987490470]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 1329.0
+offset_right = 873.0
+offset_bottom = 1378.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "SHIELD = block next hit"
+horizontal_alignment = 1
+
+[node name="ShieldIcon" type="Sprite2D" parent="StartPanel/Shield" unique_id=618394396]
+position = Vector2(-114.5, 13)
+scale = Vector2(3.46875, 3.4375)
+texture = ExtResource("18_t0png")
+
+[node name="Boost" type="Label" parent="StartPanel" unique_id=836402710]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 1479.0
+offset_right = 772.0
+offset_bottom = 1528.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "BOOST = speed up"
+horizontal_alignment = 1
+
+[node name="SpeedboostIcon" type="Sprite2D" parent="StartPanel/Boost" unique_id=833421952]
+position = Vector2(-109.500015, 21)
+scale = Vector2(3.4296885, 3.8671873)
+texture = ExtResource("19_b6swc")
+
+[node name="Repair" type="Label" parent="StartPanel" unique_id=72212113]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 1634.0
+offset_right = 860.0
+offset_bottom = 1683.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "REPAIR = restore 1 HP"
+horizontal_alignment = 1
+
+[node name="RepairIcon" type="Sprite2D" parent="StartPanel/Repair" unique_id=717461070]
+position = Vector2(-114.5, 19.000122)
+scale = Vector2(4.34375, 4.453125)
+texture = ExtResource("20_27rlx")
+
+[node name="Fuel" type="Label" parent="StartPanel" unique_id=1116314368]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 1171.0
+offset_right = 753.0
+offset_bottom = 1220.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "FUEL = refill tank"
+horizontal_alignment = 1
+
+[node name="FuelSymbol" type="Sprite2D" parent="StartPanel/Fuel" unique_id=1968708932]
+position = Vector2(-115.50003, 19)
+scale = Vector2(4.84375, 4.8125)
+texture = ExtResource("12_1e6lo")
+
+[node name="Debris" type="Label" parent="StartPanel" unique_id=1753988652]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 1785.0
+offset_right = 890.0
+offset_bottom = 1834.0
+theme_override_fonts/font = ExtResource("8_we3sy")
+theme_override_font_sizes/font_size = 40
+text = "Watch out for DEBRIS!"
+horizontal_alignment = 1
+
+[node name="Debris#1(1Lane)" type="Sprite2D" parent="StartPanel/Debris" unique_id=825558061]
+position = Vector2(-141, 9)
+scale = Vector2(1.7734375, 2.125)
+texture = ExtResource("21_vuvg6")
 
 [node name="GameOver" type="CanvasLayer" parent="." unique_id=1166721777]
+layer = 10
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="GameOver" unique_id=1296990085]

@@ -15,6 +15,18 @@ var hit_timer: float = 0.0
 
 const HIT_FLASH_DURATION: float = 0.45
 
+# ── FX anim durations / thresholds ───────────────────────────────────────
+const SPEED_FX_DURATION:    float = 3.0
+const REPAIRED_FX_DURATION: float = 1.0
+const LOW_FUEL_THRESHOLD:   float = 25.0   # fuel <= this turns on LowFuel anim
+
+@onready var speed_anim:    AnimatedSprite2D = $Speed
+@onready var lowfuel_anim:  AnimatedSprite2D = $LowFuel
+@onready var repaired_anim: AnimatedSprite2D = $Repaired
+
+var _speed_fx_timer:    float = 0.0
+var _repaired_fx_timer: float = 0.0
+
 var _tween: Tween = null
 var _shake_tween: Tween = null
 
@@ -25,6 +37,10 @@ func _ready() -> void:
 	$PickupArea.area_entered.connect(_on_pickup_area_entered)
 	GameManager.hazard_hit.connect(_on_hazard_hit)
 	GameManager.block_hit.connect(_on_block_hit)
+	GameManager.powerup_collected.connect(_on_powerup_collected)
+	GameManager.fuel_changed.connect(_on_fuel_changed)
+	GameManager.game_over.connect(_on_game_over)
+	_stop_all_fx_anims()
 
 
 func _process(delta: float) -> void:
@@ -41,8 +57,34 @@ func _process(delta: float) -> void:
 			is_hit = false
 			queue_redraw()
 
+	if _speed_fx_timer > 0.0:
+		_speed_fx_timer -= delta
+		if _speed_fx_timer <= 0.0:
+			_hide_anim(speed_anim)
+	if _repaired_fx_timer > 0.0:
+		_repaired_fx_timer -= delta
+		if _repaired_fx_timer <= 0.0:
+			_hide_anim(repaired_anim)
 
-func _input(event: InputEvent) -> void:
+
+## Input layer.
+##  - Keyboard A/Left, D/Right, Space (dump cargo), Esc (pause).
+##  - Mobile: swipe horizontally (drag past SWIPE_THRESHOLD px) to switch lanes.
+##  - No click / tap-to-move on either mouse or touch — buttons in the HUD
+##    should never get hijacked by a stray screen tap, and on desktop the
+##    keyboard handles lane switching.
+##  - dump_cargo() is NOT bound to a screen-area tap; use the HUD DumpButton
+##    on mobile or KEY_SPACE on desktop.
+##
+## Uses _unhandled_input (not _input) so HUD Buttons with mouse_filter=STOP
+## (PauseButton, DumpButton, inventory slots) absorb their own taps first.
+const SWIPE_THRESHOLD: float = 80.0
+
+var _touch_start_pos: Vector2 = Vector2.ZERO
+var _touch_is_swipe:  bool    = false
+
+
+func _unhandled_input(event: InputEvent) -> void:
 	if not GameManager.game_running:
 		return
 
@@ -53,15 +95,22 @@ func _input(event: InputEvent) -> void:
 			KEY_D, KEY_RIGHT:  switch_lane(1)
 			KEY_SPACE:         GameManager.dump_cargo()
 			KEY_ESCAPE:        GameManager.pause()
+		return
 
-	# ── Touch (portrait, single-handed) ───────────────────────────────────
-	if event is InputEventScreenTouch and event.pressed:
-		if event.position.y > 1720.0:
-			GameManager.dump_cargo()
-		elif event.position.x < 540.0:
-			switch_lane(-1)
-		else:
-			switch_lane(1)
+	# ── Touch press: track start position for swipe detection only ────────
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			_touch_start_pos = event.position
+			_touch_is_swipe  = false
+		# Release intentionally does NOTHING — no tap-to-switch.
+		return
+
+	# ── Touch drag: fire once per touch when swipe threshold is crossed ───
+	if event is InputEventScreenDrag and not _touch_is_swipe:
+		var dx: float = event.position.x - _touch_start_pos.x
+		if absf(dx) >= SWIPE_THRESHOLD:
+			_touch_is_swipe = true
+			switch_lane(1 if dx > 0.0 else -1)
 
 
 # ---------------------------------------------------------------------------
@@ -139,3 +188,55 @@ func _draw() -> void:
 		draw_rect(Rect2(-54, -86, 108, 170), Color(0.0, 1.0, 0.4, 0.25))
 		draw_rect(Rect2(-54, -86, 108, 4), Color(0.0, 1.0, 0.4, 0.8))
 		draw_rect(Rect2(-54, 80, 108, 4), Color(0.0, 1.0, 0.4, 0.8))
+
+
+# ---------------------------------------------------------------------------
+# FX animations — Speed (3s after boost), Repaired (1s after repair),
+# LowFuel (while fuel <= LOW_FUEL_THRESHOLD).
+# ---------------------------------------------------------------------------
+func _on_powerup_collected(type: String) -> void:
+	match type:
+		"SPEED_BOOST":
+			_play_anim(speed_anim, &"Speedup")
+			_speed_fx_timer = SPEED_FX_DURATION
+		"REPAIR_KIT":
+			_play_anim(repaired_anim, &"")
+			_repaired_fx_timer = REPAIRED_FX_DURATION
+
+
+func _on_fuel_changed(fuel: float) -> void:
+	if fuel > 0.0 and fuel <= LOW_FUEL_THRESHOLD:
+		if not lowfuel_anim.visible:
+			_play_anim(lowfuel_anim, &"")
+	else:
+		if lowfuel_anim.visible:
+			_hide_anim(lowfuel_anim)
+
+
+func _on_game_over(_reason: String) -> void:
+	_stop_all_fx_anims()
+
+
+func _play_anim(anim: AnimatedSprite2D, animation_name: StringName) -> void:
+	if anim == null:
+		return
+	anim.visible = true
+	if not animation_name.is_empty():
+		anim.animation = animation_name
+	anim.frame = 0
+	anim.play()
+
+
+func _hide_anim(anim: AnimatedSprite2D) -> void:
+	if anim == null:
+		return
+	anim.visible = false
+	anim.stop()
+
+
+func _stop_all_fx_anims() -> void:
+	_speed_fx_timer = 0.0
+	_repaired_fx_timer = 0.0
+	_hide_anim(speed_anim)
+	_hide_anim(lowfuel_anim)
+	_hide_anim(repaired_anim)

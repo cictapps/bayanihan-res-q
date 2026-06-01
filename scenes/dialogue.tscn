@@ -1,17 +1,130 @@
 [gd_scene format=3 uid="uid://btvrrbkl82bqr"]
 
 [ext_resource type="Script" uid="uid://igbf5f5r4ww0" path="res://scripts/dialogue.gd" id="1_jwyou"]
+[ext_resource type="Texture2D" uid="uid://d2wvgkwfqjcgp" path="res://Character sprites/Linnea.png" id="2_03vpb"]
+[ext_resource type="Texture2D" uid="uid://b3jpkn7q8v6m5" path="res://Character sprites/Rocky.png" id="3_ccu7b"]
+[ext_resource type="Texture2D" uid="uid://d2vjp3acu1fac" path="res://Character sprites/Raine.png" id="4_6xhvj"]
+[ext_resource type="Texture2D" uid="uid://7ebpgwuxhcie" path="res://Character sprites/Wendy.png" id="5_sv5jy"]
+[ext_resource type="Texture2D" uid="uid://bkoxkp22waqq3" path="res://Character sprites/Ash.png" id="6_ocawk"]
+[ext_resource type="Texture2D" uid="uid://dg5aqhrcu7jfy" path="res://Character sprites/Magnus.png" id="7_5ih08"]
+[ext_resource type="Texture2D" uid="uid://dcqjc0mu2icao" path="res://UI Deliverables/DialogueBox.png" id="8_noxhw"]
+[ext_resource type="FontFile" uid="uid://cidnk7s46u5kg" path="res://UI Deliverables/Fonts/Minecraft.ttf" id="9_d2kxg"]
+[ext_resource type="Texture2D" uid="uid://d1kghw3pabk3l" path="res://UI Deliverables/Warningbanner.png" id="10_ccu7b"]
 
-[node name="Dialogue" type="CanvasLayer" unique_id=179663980]
+[node name="Dialogue" type="CanvasLayer" unique_id=729355086]
 script = ExtResource("1_jwyou")
 
-[node name="Control" type="Panel" parent="." unique_id=1843343477]
-offset_left = 85.0
-offset_top = 326.0
-offset_right = 1010.0
-offset_bottom = 545.0
+[node name="ColorRect" type="ColorRect" parent="." unique_id=591645452]
+offset_right = 1080.0
+offset_bottom = 1920.0
+color = Color(0.49411765, 0.49411765, 0.49411765, 0.43137255)
+metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1630340223]
+[node name="Character1" type="Sprite2D" parent="." unique_id=1538917465]
+position = Vector2(821, 1031)
+scale = Vector2(0.20178224, 0.20178224)
+
+[node name="Character2" type="Sprite2D" parent="." unique_id=1386671395]
+position = Vector2(300, 1031)
+rotation = -3.1415927
+scale = Vector2(0.202, -0.202)
+
+[node name="CharEarthquake" type="Node2D" parent="." unique_id=139807242]
+
+[node name="Linnea" type="Sprite2D" parent="CharEarthquake" unique_id=350042090]
+visible = false
+position = Vector2(821, 845)
+scale = Vector2(0.20178224, 0.20178224)
+texture = ExtResource("2_03vpb")
+
+[node name="Rocky" type="Sprite2D" parent="CharEarthquake" unique_id=718796641]
+visible = false
+position = Vector2(822, 841)
+scale = Vector2(0.21496587, 0.21496587)
+texture = ExtResource("3_ccu7b")
+
+[node name="CharFlood_Typhoon" type="Node2D" parent="." unique_id=1250743100]
+
+[node name="Raine" type="Sprite2D" parent="CharFlood_Typhoon" unique_id=485285085]
+visible = false
+position = Vector2(825, 854.00006)
+scale = Vector2(0.2019043, 0.2019043)
+texture = ExtResource("4_6xhvj")
+
+[node name="Wendy" type="Sprite2D" parent="CharFlood_Typhoon" unique_id=1789930997]
+visible = false
+position = Vector2(827, 837)
+scale = Vector2(0.21313478, 0.21313478)
+texture = ExtResource("5_sv5jy")
+
+[node name="CharVolcanic" type="Node2D" parent="." unique_id=441360492]
+
+[node name="Ash" type="Sprite2D" parent="CharVolcanic" unique_id=863519867]
+visible = false
+position = Vector2(816.99994, 845.99994)
+scale = Vector2(0.20153807, 0.20153807)
+texture = ExtResource("6_ocawk")
+
+[node name="Magnus" type="Sprite2D" parent="CharVolcanic" unique_id=881441028]
+visible = false
+position = Vector2(821.99994, 847)
+scale = Vector2(0.20410155, 0.20410155)
+texture = ExtResource("7_5ih08")
+
+[node name="Control" type="Panel" parent="." unique_id=1290577486]
+offset_left = 85.0
+offset_top = 1305.0
+offset_right = 1010.0
+offset_bottom = 1524.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1373381101]
+layout_mode = 0
+offset_left = -85.0
+offset_top = -89.0
+offset_right = 993.0
+offset_bottom = 252.0
+texture = ExtResource("8_noxhw")
+
+[node name="NameLabel" type="Label" parent="Control/TextureRect" unique_id=299237731]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 52.0
+offset_right = 1009.0
+offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("9_d2kxg")
+theme_override_font_sizes/font_size = 40
+text = "Name"
+horizontal_alignment = 1
+
+[node name="TextLabel" type="Label" parent="Control/TextureRect" unique_id=323024980]
+custom_minimum_size = Vector2(925, 0)
+layout_mode = 0
+offset_left = 84.0
+offset_top = 111.0
+offset_right = 1009.0
+offset_bottom = 239.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("9_d2kxg")
+theme_override_font_sizes/font_size = 30
+text = "Input Text"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ContinueLabel" type="Label" parent="Control/TextureRect" unique_id=999357475]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 254.0
+offset_right = 1009.0
+offset_bottom = 282.0
+theme_override_fonts/font = ExtResource("9_d2kxg")
+theme_override_font_sizes/font_size = 20
+text = "▼  tap / Enter"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1306652442]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,25 +132,37 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="NameLabel" type="Label" parent="Control/VBoxContainer" unique_id=779380615]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Name"
-horizontal_alignment = 1
+[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=822811783]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="TextLabel" type="Label" parent="Control/VBoxContainer" unique_id=412420930]
-custom_minimum_size = Vector2(925, 0)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 30
-text = "Input Text"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+[node name="Warning" type="Node2D" parent="." unique_id=447637143]
+position = Vector2(0, 186)
 
-[node name="ContinueLabel" type="Label" parent="Control/VBoxContainer" unique_id=2140495047]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "▼  tap / Enter"
-horizontal_alignment = 2
-vertical_alignment = 2
+[node name="Warningbanner" type="Sprite2D" parent="Warning" unique_id=162420724]
+position = Vector2(554, 377)
+scale = Vector2(7.5833335, 7.46875)
+texture = ExtResource("10_ccu7b")
+
+[node name="WarningText" type="Label" parent="Warning" unique_id=87785790]
+offset_left = 438.0
+offset_top = 353.0
+offset_right = 669.0
+offset_bottom = 404.0
+theme_override_colors/font_color = Color(0.6745098, 0.19607843, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("9_d2kxg")
+theme_override_font_sizes/font_size = 50
+text = "WARNING"
+
+[node name="WarningText2" type="Label" parent="Warning" unique_id=798191873]
+offset_left = 289.0
+offset_top = 415.0
+offset_right = 835.0
+offset_bottom = 490.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_d2kxg")
+theme_override_font_sizes/font_size = 35
+text = "There is an incoming disaster.
+Stay safe out there!"
+horizontal_alignment = 1

@@ -24,6 +24,31 @@
 [ext_resource type="Texture2D" uid="uid://bxil7on1gvstk" path="res://assets/Obstacle Assets/Debris #2 (1-lane).png" id="22_5ayby"]
 [ext_resource type="Texture2D" uid="uid://c3e1ulncbdssn" path="res://assets/Obstacle Assets/Political Poster #1.png" id="23_heu8p"]
 [ext_resource type="Texture2D" uid="uid://b3825ylqcb3y6" path="res://assets/Obstacle Assets/Political Poster #2.png" id="24_d4j8l"]
+[ext_resource type="Texture2D" uid="uid://bm5r5aealcq3h" path="res://assets/VolcanoAssets/PNG/Volcano/Steady Volcano.png" id="25_b65fd"]
+[ext_resource type="Texture2D" uid="uid://c6olyrcpd6at2" path="res://assets/VolcanoAssets/PNG/Volcano/Starting Lava Volcano2.png" id="26_2goct"]
+[ext_resource type="Texture2D" uid="uid://bponpqw76es4h" path="res://assets/VolcanoAssets/PNG/Volcano/Starting Lava Volcano1.png" id="27_nov8n"]
+[ext_resource type="Texture2D" uid="uid://l42yo60qj6wt" path="res://assets/VolcanoAssets/PNG/Volcano/Eruption Volcano1.png" id="28_5y6b7"]
+[ext_resource type="Texture2D" uid="uid://bwl2djje1dkl3" path="res://assets/VolcanoAssets/PNG/Volcano/Eruption Volcano2.png" id="29_5mde4"]
+[ext_resource type="Texture2D" uid="uid://cvyg6n068crmc" path="res://assets/VolcanoAssets/PNG/Lava Spurt/lavaspurt2.png" id="30_kdaq6"]
+[ext_resource type="Texture2D" uid="uid://bbjw1pcdfssa1" path="res://assets/VolcanoAssets/PNG/Lava Spurt/lavaspurt3.png" id="31_h3wl6"]
+[ext_resource type="Texture2D" uid="uid://sglgu1li1ue2" path="res://assets/VolcanoAssets/PNG/Lava Spurt/lavaspurt4.png" id="32_2o7l7"]
+[ext_resource type="Texture2D" uid="uid://blpnm0et2u580" path="res://assets/VolcanoAssets/PNG/LAVA FLOW & MAGMA ROCK/Magma Rock.png" id="33_r63ra"]
+[ext_resource type="Texture2D" uid="uid://cfmjfiqmr17oo" path="res://assets/VolcanoAssets/PNG/Bahay Kubo/bahaykubo.png" id="34_exh6d"]
+[ext_resource type="Texture2D" uid="uid://cofsv0i8f3dem" path="res://assets/VolcanoAssets/PNG/Bahay Kubo/bahaykubo2.png" id="35_t4ywe"]
+[ext_resource type="Texture2D" uid="uid://cq1euxo4vnbx5" path="res://assets/VolcanoAssets/PNG/Hazy Air (Vision Block)/hazyair2.png" id="36_pdjg0"]
+[ext_resource type="Texture2D" uid="uid://mx7baum8nwk2" path="res://assets/VolcanoAssets/PNG/LAVA FLOW & MAGMA ROCK/Lava Flow 2.png" id="37_si5ui"]
+[ext_resource type="Texture2D" uid="uid://6fgnv21tvk48" path="res://assets/VolcanoAssets/PNG/LAVA FLOW & MAGMA ROCK/Lava Flow 1.png" id="38_voadw"]
+[ext_resource type="Texture2D" uid="uid://c8w007svjq4s" path="res://assets/Obstacle Assets/crack-1_96x96.png" id="39_aylpn"]
+[ext_resource type="Texture2D" uid="uid://obn23qpbcwsd" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain2.png" id="40_iil63"]
+[ext_resource type="Texture2D" uid="uid://dy771mp3dddki" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain3.png" id="41_kd1vg"]
+[ext_resource type="Texture2D" uid="uid://b7c4rjq7la66v" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain4.png" id="42_mclav"]
+[ext_resource type="Texture2D" uid="uid://bxlvhnhkx33wm" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain5.png" id="43_qsrvf"]
+[ext_resource type="Texture2D" uid="uid://v6htpe7p4o5o" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain6.png" id="44_hpowt"]
+[ext_resource type="Texture2D" uid="uid://cbvftvmcanbnm" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain7.png" id="45_bhgkq"]
+[ext_resource type="Texture2D" uid="uid://cijd3r8miw2du" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain8.png" id="46_0270o"]
+[ext_resource type="Texture2D" uid="uid://bcvr4yejn87cn" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain9.png" id="47_s0xkj"]
+[ext_resource type="Texture2D" uid="uid://d01webniohpu7" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain10.png" id="48_pdgs6"]
+[ext_resource type="Texture2D" uid="uid://cflo28eak5b3v" path="res://assets/VolcanoAssets/PNG/Lava Rain/lavarain.png" id="49_0077r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qr0rw"]
 atlas = ExtResource("3_x3eag")
@@ -632,6 +657,48 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj3ce"]
+atlas = ExtResource("40_iil63")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sg2ly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj3ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_kd1vg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_mclav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_qsrvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_hpowt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_bhgkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_0270o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_s0xkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_pdgs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_0077r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Hazard" type="CanvasLayer" unique_id=491691522]
 script = ExtResource("1_b64ds")
 
@@ -1079,8 +1146,182 @@ position = Vector2(-56.274727, 4.3702264)
 scale = Vector2(0.4318056, 0.21964303)
 texture = ExtResource("24_d4j8l")
 
-[node name="Volcanic" type="Sprite2D" parent="." unique_id=1325717967]
-visible = false
+[node name="Volcanic" type="Sprite2D" parent="." unique_id=1560983208]
 self_modulate = Color(0.23921569, 0, 0, 0.5882353)
 position = Vector2(547, 966)
 scale = Vector2(8.594, 15.188)
+
+[node name="RoadScroll" type="Node2D" parent="Volcanic" unique_id=1212418406]
+visible = false
+position = Vector2(-63.65091, -63.604935)
+scale = Vector2(0.11636364, 0.06584362)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Volcanic/RoadScroll" unique_id=1179648024]
+position = Vector2(541, 1755)
+scale = Vector2(3.0742188, 3.4804685)
+texture = ExtResource("2_t7fbv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Volcanic/RoadScroll" unique_id=1839159077]
+position = Vector2(541, 1423)
+scale = Vector2(3.0742188, 3.4804685)
+texture = ExtResource("2_t7fbv")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Volcanic/RoadScroll" unique_id=301954136]
+position = Vector2(541, 1088.9999)
+scale = Vector2(3.0742188, 3.4804685)
+texture = ExtResource("2_t7fbv")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Volcanic/RoadScroll" unique_id=154784450]
+position = Vector2(542, 763)
+scale = Vector2(3.0742188, 3.4804685)
+texture = ExtResource("2_t7fbv")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Volcanic/RoadScroll" unique_id=511580974]
+position = Vector2(541, 429.99997)
+scale = Vector2(3.0742188, 3.4804685)
+texture = ExtResource("2_t7fbv")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Volcanic/RoadScroll" unique_id=2058886280]
+position = Vector2(541, 101)
+scale = Vector2(3.0742188, 3.4804685)
+texture = ExtResource("2_t7fbv")
+
+[node name="DisplayVolcanoes" type="Node2D" parent="Volcanic" unique_id=499816794]
+position = Vector2(-63.650913, -63.60494)
+scale = Vector2(0.11636364, 0.06584363)
+
+[node name="SteadyVolcano" type="Sprite2D" parent="Volcanic/DisplayVolcanoes" unique_id=1724547445]
+position = Vector2(38.014793, 1377.9862)
+scale = Vector2(2.9575963, 2.332441)
+texture = ExtResource("25_b65fd")
+
+[node name="StartingLavaVolcano2" type="Sprite2D" parent="Volcanic/DisplayVolcanoes" unique_id=480284001]
+position = Vector2(13.0154915, 812.005)
+scale = Vector2(1.6692222, 1.4660981)
+texture = ExtResource("26_2goct")
+
+[node name="SteadyVolcano2" type="Sprite2D" parent="Volcanic/DisplayVolcanoes" unique_id=1321682736]
+position = Vector2(1034.9857, 1815.9719)
+scale = Vector2(3.135325, 2.5520003)
+texture = ExtResource("25_b65fd")
+
+[node name="StartingLavaVolcano1" type="Sprite2D" parent="Volcanic/DisplayVolcanoes" unique_id=117379589]
+position = Vector2(55.01433, 1494.9824)
+scale = Vector2(2.4582617, 1.6509873)
+texture = ExtResource("27_nov8n")
+
+[node name="EruptionVolcano1" type="Sprite2D" parent="Volcanic/DisplayVolcanoes" unique_id=325784377]
+position = Vector2(536.0004, -161.96284)
+scale = Vector2(14.123286, 10.813446)
+texture = ExtResource("28_5y6b7")
+
+[node name="EruptionVolcano2" type="Sprite2D" parent="Volcanic/DisplayVolcanoes" unique_id=2001511152]
+position = Vector2(92.01331, 683.0092)
+scale = Vector2(0.9791374, 0.97392684)
+texture = ExtResource("29_5mde4")
+
+[node name="StartingLavaVolcano3" type="Sprite2D" parent="Volcanic/DisplayVolcanoes" unique_id=1811364611]
+position = Vector2(1015.9863, 1540.9808)
+scale = Vector2(1.0833018, 0.9739258)
+texture = ExtResource("27_nov8n")
+
+[node name="DisplayOthers" type="Node2D" parent="Volcanic" unique_id=1824926303]
+
+[node name="Lavaspurt2" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=474301072]
+position = Vector2(-55.85292, 28.245983)
+scale = Vector2(0.3624137, 0.18929419)
+texture = ExtResource("30_kdaq6")
+
+[node name="Lavaspurt3" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=1137921200]
+visible = false
+position = Vector2(-0.11635971, -43.587044)
+scale = Vector2(0.75634164, 0.32783562)
+texture = ExtResource("31_h3wl6")
+
+[node name="Lavaspurt4" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=1299039953]
+position = Vector2(-59.343735, -7.242565)
+scale = Vector2(0.12605695, 0.09807628)
+texture = ExtResource("32_2o7l7")
+
+[node name="Lavaspurt5" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=1540177998]
+position = Vector2(58.52921, 46.35239)
+scale = Vector2(0.4411993, 0.22838758)
+texture = ExtResource("30_kdaq6")
+
+[node name="MagmaRock" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=525777735]
+position = Vector2(-63.41634, 40.36082)
+scale = Vector2(0.064240605, 0.031891987)
+texture = ExtResource("33_r63ra")
+
+[node name="Bahaykubo" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=8198660]
+position = Vector2(-62.834545, -43.060326)
+scale = Vector2(0.22044815, 0.1445426)
+texture = ExtResource("34_exh6d")
+
+[node name="Bahaykubo2" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=2111934047]
+position = Vector2(-48.056778, -44.24546)
+scale = Vector2(0.20241836, 0.100819744)
+texture = ExtResource("35_t4ywe")
+
+[node name="Bahaykubo3" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=314981677]
+position = Vector2(62.3691, -39.30735)
+scale = Vector2(0.14666238, 0.09327541)
+texture = ExtResource("34_exh6d")
+
+[node name="Hazyair2" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=1048609506]
+position = Vector2(-33.30812, 47.669216)
+scale = Vector2(0.6514961, 0.3456677)
+texture = ExtResource("36_pdjg0")
+
+[node name="Hazyair3" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=1486523102]
+position = Vector2(45.9623, -43.191994)
+scale = Vector2(0.3442324, 0.16186024)
+texture = ExtResource("36_pdjg0")
+flip_h = true
+
+[node name="Lavaspurt6" type="Sprite2D" parent="Volcanic/DisplayOthers" unique_id=926521233]
+position = Vector2(56.551083, 39.70241)
+scale = Vector2(0.116360255, 0.06584146)
+texture = ExtResource("32_2o7l7")
+
+[node name="Debris" type="Node2D" parent="Volcanic" unique_id=984826320]
+
+[node name="LavaFlow2" type="Sprite2D" parent="Volcanic/Debris" unique_id=915828883]
+position = Vector2(-34.09355, -13.168289)
+scale = Vector2(0.20787275, 0.109735735)
+texture = ExtResource("37_si5ui")
+
+[node name="LavaFlow1" type="Sprite2D" parent="Volcanic/Debris" unique_id=1246538679]
+position = Vector2(0.6981621, 7.5717735)
+scale = Vector2(0.21817547, 0.12825367)
+texture = ExtResource("38_voadw")
+
+[node name="Crack196x96" type="Sprite2D" parent="Volcanic/Debris" unique_id=1137018332]
+position = Vector2(39.678844, 39.50488)
+scale = Vector2(0.2569622, 0.13511215)
+texture = ExtResource("39_aylpn")
+
+[node name="Crack296x96" type="Sprite2D" parent="Volcanic/Debris" unique_id=367757003]
+position = Vector2(-39.911568, 8.427708)
+scale = Vector2(0.2496897, 0.120709345)
+texture = ExtResource("17_u737u")
+
+[node name="Crack196x97" type="Sprite2D" parent="Volcanic/Debris" unique_id=1184309838]
+position = Vector2(37.933453, -19.225704)
+scale = Vector2(0.26423472, 0.120709345)
+texture = ExtResource("39_aylpn")
+
+[node name="LavaRain" type="Node2D" parent="Volcanic" unique_id=1097556938]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Volcanic/LavaRain" unique_id=452760928]
+position = Vector2(-2.2236137, -12.744484)
+scale = Vector2(1.0547808, 0.7812683)
+sprite_frames = SubResource("SpriteFrames_sg2ly")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Volcanic/LavaRain" unique_id=1196049757]
+visible = false
+position = Vector2(30.188381, -33.562477)
+scale = Vector2(0.47377774, 0.29937702)
+sprite_frames = SubResource("SpriteFrames_sg2ly")

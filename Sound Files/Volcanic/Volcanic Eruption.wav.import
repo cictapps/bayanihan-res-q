@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cv7jeiidddt3i"
+path="res://.godot/imported/Volcanic Eruption.wav-c33ed286ea7f9a0e21619970c79103e5.sample"
+
+[deps]
+
+source_file="res://Sound Files/Volcanic/Volcanic Eruption.wav"
+dest_files=["res://.godot/imported/Volcanic Eruption.wav-c33ed286ea7f9a0e21619970c79103e5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

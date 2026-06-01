@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fx2d7y64f5c2"
+path="res://.godot/imported/Heavy rain and thunder.mp3-e2bd35eee20591cd3179c81ebcbf1479.mp3str"
+
+[deps]
+
+source_file="res://Sound Files/Typhoon/Heavy rain and thunder.mp3"
+dest_files=["res://.godot/imported/Heavy rain and thunder.mp3-e2bd35eee20591cd3179c81ebcbf1479.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

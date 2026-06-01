@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://crjgcdyi0swyk"]
+
+[ext_resource type="Texture2D" uid="uid://d1kghw3pabk3l" path="res://UI Deliverables/Warningbanner.png" id="1_jupec"]
+[ext_resource type="FontFile" uid="uid://cidnk7s46u5kg" path="res://UI Deliverables/Fonts/Minecraft.ttf" id="2_8hufe"]
+
+[node name="Warning" type="Node2D"]
+
+[node name="Warningbanner" type="Sprite2D" parent="."]
+position = Vector2(549, 916)
+scale = Vector2(7.5833335, 7.46875)
+texture = ExtResource("1_jupec")
+
+[node name="WarningText" type="Label" parent="."]
+offset_left = 433.0
+offset_top = 892.0
+offset_right = 664.0
+offset_bottom = 943.0
+theme_override_colors/font_color = Color(0.6745098, 0.19607843, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("2_8hufe")
+theme_override_font_sizes/font_size = 50
+text = "WARNING"
+
+[node name="WarningText2" type="Label" parent="."]
+offset_left = 284.0
+offset_top = 954.0
+offset_right = 830.0
+offset_bottom = 1029.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8hufe")
+theme_override_font_sizes/font_size = 35
+text = "There is an incoming disaster.
+Stay safe out there!"
+horizontal_alignment = 1

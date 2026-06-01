@@ -39,6 +39,28 @@ func _ready() -> void:
 	else:
 		push_warning("RoadScroll: could not find Background node in parent.")
 
+	# Mid-game hazard transitions still happen on panel wrap (smooth). But on
+	# a fresh start we force both panels back to plain grass so the player
+	# doesn't see last run's flood / typhoon road for a few seconds.
+	GameManager.level_up.connect(_on_level_up)
+
+
+func _on_level_up(lvl: int) -> void:
+	if lvl == 1:
+		_force_hide_hazard_backgrounds(bg_a)
+		_force_hide_hazard_backgrounds(bg_b)
+
+
+func _force_hide_hazard_backgrounds(panel: Node2D) -> void:
+	if panel == null:
+		return
+	var typhoon_tileset := panel.get_node_or_null("Main/TyphoonTileset") as CanvasItem
+	var flood_tileset := panel.get_node_or_null("Main/FloodTileset") as CanvasItem
+	if typhoon_tileset != null:
+		typhoon_tileset.visible = false
+	if flood_tileset != null:
+		flood_tileset.visible = false
+
 
 func _process(delta: float) -> void:
 	if not GameManager.game_running:

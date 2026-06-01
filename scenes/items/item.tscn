@@ -25,6 +25,26 @@
 [ext_resource type="Texture2D" uid="uid://c1k7enylrqut1" path="res://assets/Flood & Typhoon Assets/Obstacles/Leaves_Flooded.png" id="23_70qoo"]
 [ext_resource type="Texture2D" uid="uid://m716sv5hikfd" path="res://assets/Flood & Typhoon Assets/Obstacles/Trash_Flooded2.png" id="24_0f4th"]
 [ext_resource type="Texture2D" uid="uid://ci0pf4hr7fem8" path="res://assets/Flood & Typhoon Assets/Obstacles/Trash_Flooded.png" id="25_v3reu"]
+[ext_resource type="Texture2D" uid="uid://b5qtdeehkw7f6" path="res://assets/Obstacle Assets/Electrical-Post.32x32.png" id="26_0f4th"]
+[ext_resource type="Texture2D" uid="uid://c3e1ulncbdssn" path="res://assets/Obstacle Assets/Political Poster #1.png" id="27_v3reu"]
+[ext_resource type="Texture2D" uid="uid://b3825ylqcb3y6" path="res://assets/Obstacle Assets/Political Poster #2.png" id="28_axa1q"]
+[ext_resource type="Texture2D" uid="uid://hb6qqj2l2f2c" path="res://assets/Obstacle Assets/Political Poster #3.png" id="29_s2atr"]
+[ext_resource type="Texture2D" uid="uid://l64ev3ex22d5" path="res://assets/VolcanoAssets/PNG/evacuationsignage.png" id="30_yjxqd"]
+[ext_resource type="Texture2D" uid="uid://c33hkhiwihctg" path="res://assets/VolcanoAssets/PNG/Coconut Tree/coconuttree.png" id="31_6ri2o"]
+[ext_resource type="Texture2D" uid="uid://bawne0egvdyvc" path="res://assets/VolcanoAssets/PNG/Coconut Tree/coconuttree2.png" id="32_6ri2o"]
+[ext_resource type="Texture2D" uid="uid://cfmjfiqmr17oo" path="res://assets/VolcanoAssets/PNG/Bahay Kubo/bahaykubo.png" id="33_o5jbk"]
+[ext_resource type="Texture2D" uid="uid://cofsv0i8f3dem" path="res://assets/VolcanoAssets/PNG/Bahay Kubo/bahaykubo2.png" id="34_urx0o"]
+[ext_resource type="Texture2D" uid="uid://bfgmlbqd42fgy" path="res://assets/VolcanoAssets/PNG/LavaOnRoad/lavaonroad2.png" id="35_mmd67"]
+[ext_resource type="Texture2D" uid="uid://b5476p41x1k78" path="res://assets/VolcanoAssets/PNG/LavaOnRoad/lavaonroad3.png" id="36_y7pkn"]
+[ext_resource type="Texture2D" uid="uid://b7t6jr1t68rrj" path="res://assets/VolcanoAssets/PNG/LavaOnRoad/lavaonroad4.png" id="37_jtvin"]
+[ext_resource type="Texture2D" uid="uid://bdjooxvmy4vip" path="res://assets/VolcanoAssets/PNG/LavaOnRoad/lavaonroad5.png" id="38_8ft14"]
+[ext_resource type="Texture2D" uid="uid://dwlgedjm2qg2o" path="res://assets/VolcanoAssets/PNG/LavaOnRoad/lavaonroad6.png" id="39_tyotb"]
+[ext_resource type="Texture2D" uid="uid://bddt2m5tv0dw6" path="res://assets/VolcanoAssets/PNG/LavaOnRoad/lavaonroad7.png" id="40_s5bfu"]
+[ext_resource type="Texture2D" uid="uid://cmqoj7pv48nxn" path="res://assets/VolcanoAssets/PNG/LavaOnRoad/lavaonroad8.png" id="41_uwq5i"]
+[ext_resource type="Texture2D" uid="uid://6fgnv21tvk48" path="res://assets/VolcanoAssets/PNG/LAVA FLOW & MAGMA ROCK/Lava Flow 1.png" id="42_tyotb"]
+[ext_resource type="Texture2D" uid="uid://mx7baum8nwk2" path="res://assets/VolcanoAssets/PNG/LAVA FLOW & MAGMA ROCK/Lava Flow 2.png" id="43_s5bfu"]
+[ext_resource type="Texture2D" uid="uid://da7q5o6lcj5gj" path="res://assets/VolcanoAssets/PNG/LAVA FLOW & MAGMA ROCK/Lava Flow 3.png" id="44_uwq5i"]
+[ext_resource type="Texture2D" uid="uid://blpnm0et2u580" path="res://assets/VolcanoAssets/PNG/LAVA FLOW & MAGMA ROCK/Magma Rock.png" id="45_c0ojs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_item"]
 size = Vector2(84, 84)
@@ -781,6 +801,63 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jca63"]
+atlas = ExtResource("35_mmd67")
+region = Rect2(0, 0, 512, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5bl7"]
+atlas = ExtResource("36_y7pkn")
+region = Rect2(0, 0, 512, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmsw3"]
+atlas = ExtResource("37_jtvin")
+region = Rect2(0, 0, 512, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv2hm"]
+atlas = ExtResource("38_8ft14")
+region = Rect2(0, 0, 512, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5843"]
+atlas = ExtResource("39_tyotb")
+region = Rect2(0, 0, 512, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfp4y"]
+atlas = ExtResource("40_s5bfu")
+region = Rect2(0, 0, 512, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4fbg"]
+atlas = ExtResource("41_uwq5i")
+region = Rect2(0, 0, 512, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfakg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jca63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5bl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmsw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv2hm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5843")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfp4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4fbg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_70huk"]
 atlas = ExtResource("15_0f4th")
 region = Rect2(0, 0, 224, 64)
@@ -878,6 +955,25 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_g8tsn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fl6k7")
+}],
+"loop": false,
+"name": &"Tree1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ys3d")
+}],
+"loop": false,
+"name": &"Tree2",
+"speed": 5.0
+}]
+
 [node name="Item" type="Area2D" unique_id=2130882771]
 collision_layer = 2
 collision_mask = 0
@@ -885,7 +981,6 @@ monitoring = false
 script = ExtResource("1_itembase")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2119670870]
-visible = false
 shape = SubResource("RectangleShape2D_item")
 
 [node name="MR-2LaneCollisionShape2D" type="CollisionShape2D" parent="." unique_id=1973249255]
@@ -969,6 +1064,26 @@ visible = false
 scale = Vector2(3, 3)
 texture = ExtResource("25_v3reu")
 
+[node name="MagmaBlockage1" type="Sprite2D" parent="." unique_id=149931544]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("42_tyotb")
+
+[node name="MagmaBlockage2" type="Sprite2D" parent="." unique_id=1272042651]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("43_s5bfu")
+
+[node name="MagmaBlockage3" type="Sprite2D" parent="." unique_id=1372303570]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("44_uwq5i")
+
+[node name="MagmaBlockage4" type="Sprite2D" parent="." unique_id=854388140]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("45_c0ojs")
+
 [node name="R-LaneTreeAnim" type="AnimatedSprite2D" parent="." unique_id=2074278478]
 visible = false
 texture_filter = 1
@@ -1002,7 +1117,90 @@ texture_filter = 1
 position = Vector2(-80, 0)
 scale = Vector2(-3, 3)
 sprite_frames = SubResource("SpriteFrames_ah3ae")
-animation = &"Debris4"
+animation = &"Debris3"
+frame = 5
+frame_progress = 1.0
+
+[node name="L-LaneLavaAnim" type="AnimatedSprite2D" parent="." unique_id=313621956]
+visible = false
+position = Vector2(-100, 0)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.17473303
+
+[node name="L-LaneLavaAnim" type="AnimatedSprite2D" parent="L-LaneLavaAnim" unique_id=1527172152]
+z_index = -1
+position = Vector2(-141.25002, -131.25)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.47778273
+
+[node name="L-LaneLavaAnim2" type="AnimatedSprite2D" parent="L-LaneLavaAnim" unique_id=1554601697]
+z_index = -1
+position = Vector2(-145, 117.5)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.81003904
+
+[node name="L-LaneLavaAnim3" type="AnimatedSprite2D" parent="L-LaneLavaAnim" unique_id=1896059049]
+z_index = -2
+position = Vector2(-277.5, 170.00002)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.44724384
+
+[node name="L-LaneLavaAnim4" type="AnimatedSprite2D" parent="L-LaneLavaAnim" unique_id=793753855]
+z_index = -2
+position = Vector2(-280, -183.75)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.8833793
+
+[node name="R-LaneLavaAnim" type="AnimatedSprite2D" parent="." unique_id=1657951535]
+visible = false
+position = Vector2(100, 0)
+rotation = 3.1415927
+scale = Vector2(0.8, -0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.47211546
+
+[node name="R-LaneLavaAnim" type="AnimatedSprite2D" parent="R-LaneLavaAnim" unique_id=837838323]
+z_index = -1
+position = Vector2(-141.25002, -131.25)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.14659214
+
+[node name="R-LaneLavaAnim2" type="AnimatedSprite2D" parent="R-LaneLavaAnim" unique_id=294356588]
+z_index = -1
+position = Vector2(-145, 117.5)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.06773513
+
+[node name="R-LaneLavaAnim3" type="AnimatedSprite2D" parent="R-LaneLavaAnim" unique_id=532167341]
+z_index = -2
+position = Vector2(-277.5, 170.00002)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.58304286
+
+[node name="R-LaneLavaAnim4" type="AnimatedSprite2D" parent="R-LaneLavaAnim" unique_id=371953280]
+z_index = -2
+position = Vector2(-270, -181.25)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_tfakg")
+autoplay = "default"
+frame_progress = 0.22920191
 
 [node name="MR-2LaneDebrisAnim" type="AnimatedSprite2D" parent="." unique_id=2017790965]
 visible = false
@@ -1019,3 +1217,147 @@ position = Vector2(-224.00002, 0)
 scale = Vector2(-3, 3)
 sprite_frames = SubResource("SpriteFrames_31qmc")
 animation = &"Debris5"
+
+[node name="GrassItems" type="Node2D" parent="." unique_id=1949434037]
+
+[node name="R-Tree" type="AnimatedSprite2D" parent="GrassItems" unique_id=520883492]
+visible = false
+texture_filter = 1
+position = Vector2(100, -100)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_g8tsn")
+animation = &"Tree2"
+
+[node name="L-Tree" type="AnimatedSprite2D" parent="GrassItems" unique_id=1230996227]
+visible = false
+texture_filter = 1
+position = Vector2(-100, -100)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_g8tsn")
+animation = &"Tree2"
+
+[node name="R - Electrical Post" type="Sprite2D" parent="GrassItems" unique_id=927276855]
+visible = false
+texture_filter = 1
+position = Vector2(196.00002, -115)
+scale = Vector2(3, 3)
+texture = ExtResource("26_0f4th")
+
+[node name="L - Electrical Post" type="Sprite2D" parent="GrassItems" unique_id=632616940]
+visible = false
+texture_filter = 1
+position = Vector2(-196, -115)
+scale = Vector2(3, 3)
+texture = ExtResource("26_0f4th")
+
+[node name="R - Political Poster 1" type="Sprite2D" parent="GrassItems" unique_id=1767229473]
+visible = false
+texture_filter = 1
+position = Vector2(193, -27.999998)
+scale = Vector2(3, 3)
+texture = ExtResource("27_v3reu")
+
+[node name="L - Political Poster 1" type="Sprite2D" parent="GrassItems" unique_id=1420901575]
+visible = false
+texture_filter = 1
+position = Vector2(-193, -21.000002)
+scale = Vector2(3, 3)
+texture = ExtResource("27_v3reu")
+
+[node name="R - Political Poster 2" type="Sprite2D" parent="GrassItems" unique_id=23105955]
+visible = false
+texture_filter = 1
+position = Vector2(193, -27.999998)
+scale = Vector2(3, 3)
+texture = ExtResource("28_axa1q")
+
+[node name="L - Political Poster 2" type="Sprite2D" parent="GrassItems" unique_id=1841929594]
+visible = false
+texture_filter = 1
+position = Vector2(-193, -21.000002)
+scale = Vector2(3, 3)
+texture = ExtResource("28_axa1q")
+
+[node name="R - Political Poster 3" type="Sprite2D" parent="GrassItems" unique_id=1538542161]
+visible = false
+texture_filter = 1
+position = Vector2(193, -27.999998)
+scale = Vector2(3, 3)
+texture = ExtResource("29_s2atr")
+
+[node name="L - Political Poster 3" type="Sprite2D" parent="GrassItems" unique_id=11127904]
+visible = false
+texture_filter = 1
+position = Vector2(-193, -21.000002)
+scale = Vector2(3, 3)
+texture = ExtResource("29_s2atr")
+
+[node name="R - Evacuation Sign" type="Sprite2D" parent="GrassItems" unique_id=395927993]
+visible = false
+texture_filter = 1
+position = Vector2(193, -27.999998)
+scale = Vector2(3, 3)
+texture = ExtResource("30_yjxqd")
+
+[node name="L - Evacuation Sign" type="Sprite2D" parent="GrassItems" unique_id=765903807]
+visible = false
+texture_filter = 1
+position = Vector2(-193, -21.000002)
+scale = Vector2(3, 3)
+texture = ExtResource("30_yjxqd")
+
+[node name="R - Coconut Tree" type="Sprite2D" parent="GrassItems" unique_id=425219657]
+visible = false
+texture_filter = 1
+position = Vector2(197.00002, -85.00001)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("31_6ri2o")
+
+[node name="L - Coconut Tree" type="Sprite2D" parent="GrassItems" unique_id=605250045]
+visible = false
+texture_filter = 1
+position = Vector2(-197, -85)
+scale = Vector2(-2.5, 2.5)
+texture = ExtResource("31_6ri2o")
+
+[node name="R - Burned Coconut Tree" type="Sprite2D" parent="GrassItems" unique_id=523538282]
+visible = false
+texture_filter = 1
+position = Vector2(197.00002, -85.00001)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("32_6ri2o")
+
+[node name="L - Burned Coconut Tree" type="Sprite2D" parent="GrassItems" unique_id=641634371]
+visible = false
+texture_filter = 1
+position = Vector2(-197, -85)
+scale = Vector2(-2.5, 2.5)
+texture = ExtResource("32_6ri2o")
+
+[node name="R - Bahay Kubo" type="Sprite2D" parent="GrassItems" unique_id=1314466984]
+visible = false
+texture_filter = 1
+position = Vector2(265, -103)
+scale = Vector2(3, 3)
+texture = ExtResource("33_o5jbk")
+
+[node name="L - Bahay Kubo" type="Sprite2D" parent="GrassItems" unique_id=1378282958]
+visible = false
+texture_filter = 1
+position = Vector2(-265, -103)
+scale = Vector2(-3, 3)
+texture = ExtResource("33_o5jbk")
+
+[node name="R - Burned Bahay Kubo" type="Sprite2D" parent="GrassItems" unique_id=650635122]
+visible = false
+texture_filter = 1
+position = Vector2(265, -103)
+scale = Vector2(3, 3)
+texture = ExtResource("34_urx0o")
+
+[node name="L - Burned Bahay Kubo" type="Sprite2D" parent="GrassItems" unique_id=1941311362]
+visible = false
+texture_filter = 1
+position = Vector2(-265, -103)
+scale = Vector2(-3, 3)
+texture = ExtResource("34_urx0o")

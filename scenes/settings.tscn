@@ -11,7 +11,6 @@
 [ext_resource type="FontFile" uid="uid://cidnk7s46u5kg" path="res://UI Deliverables/Fonts/Minecraft.ttf" id="10_ohexs"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6mhpt"]
-load_path = "res://.godot/imported/replaybutton.png-f44b5212901aacf0ba1b2cfc3106a733.ctex"
 
 [node name="Paused" type="Node2D"]
 

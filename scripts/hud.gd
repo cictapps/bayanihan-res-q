@@ -213,10 +213,12 @@ func _on_start_pressed() -> void:
 
 
 func _on_restart_pressed() -> void:
+	AudioManager.stop_all()
 	get_tree().reload_current_scene()
 
 
 func _on_menu_pressed() -> void:
+	AudioManager.stop_all()
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 

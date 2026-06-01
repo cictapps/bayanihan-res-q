@@ -61,6 +61,7 @@ var demands_fulfilled_count: int = 0
 var combo: int = 0
 var high_score: int = 0
 var fuel_drain_rate: float = FUEL_DRAIN_RATE
+var prologue_seen: bool = false
 
 
 # ---------------------------------------------------------------------------
@@ -107,7 +108,9 @@ func start_game() -> void:
 	emit_signal("inventory_changed",  inventory)
 	emit_signal("level_up",           level)
 	emit_signal("combo_changed",      combo)
-	play_dialogue(1)
+	# No start-of-game dialogue — the four hazard dialogues (1: Typhoon,
+	# 2: Flood, 3: Earthquake, 4: Volcanic) are triggered from hazard_event.gd
+	# when the corresponding events first appear.
 
 
 func end_game(reason: String) -> void:
@@ -271,12 +274,22 @@ func _load_high_score() -> void:
 	var cfg := ConfigFile.new()
 	if cfg.load("user://save.cfg") == OK:
 		high_score = cfg.get_value("game", "high_score", 0)
+		prologue_seen = cfg.get_value("game", "prologue_seen", false)
 
 
 func _save_high_score() -> void:
 	var cfg := ConfigFile.new()
 	cfg.set_value("game", "high_score", high_score)
+	cfg.set_value("game", "prologue_seen", prologue_seen)
 	cfg.save("user://save.cfg")
+
+
+func mark_prologue_seen() -> void:
+	if prologue_seen:
+		return
+	prologue_seen = true
+	_save_high_score()
+
 
 func play_dialogue(id: int) -> void:
 	emit_signal("dialogue_requested", id)
